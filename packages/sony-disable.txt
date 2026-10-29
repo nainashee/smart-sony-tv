@@ -1,0 +1,9 @@
+# Packages to disable on the Sony Google TV.
+# One package per line. Anything after '#' is a comment.
+#
+# This list starts EMPTY on purpose. Package names differ by model and year,
+# so fill it from your own export (exports\all-packages.txt) after review.
+# See docs\debloat.md for how each package was judged.
+#
+# Format:
+# com.example.package     # what it is — why it's safe to disable

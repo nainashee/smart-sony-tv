@@ -1,0 +1,16 @@
+# Per-device exports and logs (may contain device details)
+exports/
+
+# Never commit APKs — link to official releases instead
+*.apk
+
+# Android Studio build output
+hulu-ad-mute/**/build/
+hulu-ad-mute/.gradle/
+hulu-ad-mute/local.properties
+*.iml
+.idea/
+
+# OS junk
+Thumbs.db
+.DS_Store
