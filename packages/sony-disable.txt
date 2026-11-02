@@ -1,9 +1,71 @@
 # Packages to disable on the Sony Google TV.
 # One package per line. Anything after '#' is a comment.
+# Reviewed against: BRAVIA 4K VH21, Android TV OS 12 (250 packages, 239 system).
+# See docs/debloat.md for the full decision log.
 #
-# This list starts EMPTY on purpose. Package names differ by model and year,
-# so fill it from your own export (exports\all-packages.txt) after review.
-# See docs\debloat.md for how each package was judged.
-#
-# Format:
-# com.example.package     # what it is — why it's safe to disable
+# Lines starting with '#' are skipped. To disable an optional package,
+# delete the '# ' in front of it, then run the dry run again.
+
+# ---------------------------------------------------------------
+# BATCH 1 — tracking, ads, promos, demo mode (active)
+# No visible feature loss. Run this batch first.
+# ---------------------------------------------------------------
+tv.samba.ssm                         # Samba TV — ACR, fingerprints what's on screen (incl. HDMI) for ad targeting
+tv.samba.ssm.ui                      # Samba TV opt-in UI
+com.sonyericsson.idd.agent           # Sony usage-data telemetry agent
+com.sony.dtv.promos                  # Sony promotional content
+com.sony.dtv.sonyselect              # Sony Select — promoted apps row
+com.sonypicturescore                 # Sony Pictures Core — preloaded movie store
+com.sony.dtv.demosupport             # Retail store demo mode
+com.sony.dtv.demosystemsupport       # Retail store demo mode (system side)
+com.sony.dtv.multiscreendemo         # Retail store demo video
+com.google.android.feedback          # Google feedback reporter
+com.android.printspooler             # Printing service — a TV doesn't print
+com.google.android.play.games        # Google Play Games
+
+# ---------------------------------------------------------------
+# BATCH 2 — your call (commented out)
+# Uncomment only what you don't use.
+# ---------------------------------------------------------------
+
+# Diagnostics / analytics
+# com.qterics.da.product             # Third-party device analytics/remote diagnostics for Sony
+# com.sony.dtv.da.service            # Sony device analytics service
+
+# BRAVIA CAM features — disable only if you don't have a BRAVIA CAM attached
+# com.sony.dtv.sensingcamera.fwupdate
+# com.sony.dtv.sensingcamera.settings
+# com.sony.dtv.gestureapp            # Hand-gesture control (needs camera)
+# com.sony.dtv.distancealert         # "Too close to TV" alert (needs camera)
+
+# Preloaded streaming apps — disable the ones you never open
+# com.amazon.amazonvideo.livingroom  # Prime Video
+# com.disney.disneyplus              # Disney+
+# com.netflix.ninja                  # Netflix
+# com.netflix.partner.ncm            # Netflix partner helper (disable with Netflix only)
+# com.cbs.ott                        # Paramount+
+# com.sling                          # Sling TV
+# com.tubitv                         # Tubi
+# com.xumo.xumo.tv                   # Xumo
+# tv.pluto.android                   # Pluto TV
+# air.com.vudu.air.DownloaderTablet  # Vudu / Fandango at Home
+# com.espn.score_center              # ESPN
+# com.spotify.tv.android             # Spotify
+# com.apple.atve.sony.appletv        # Apple TV app — redundant if you use the Apple TV box
+# com.google.android.youtube.tvkids  # YouTube Kids
+# com.google.android.youtube.tvmusic # YouTube Music
+# com.google.android.youtube.tvunplugged  # YouTube TV (live TV subscription)
+# com.google.android.videos          # Google TV Shop/Library (rentals, purchases)
+
+# Features you may not use
+# com.google.android.marvin.talkback # TalkBack screen reader
+# com.sony.dtv.ecodashboard          # Eco settings dashboard
+# com.sony.dtv.helpguidecontents     # Built-in help manual
+# com.sony.dtv.smarthelp             # Help app
+# com.google.android.apps.tv.dreamx  # Google ambient screensaver (photos/art)
+# com.sony.dtv.airplayapp            # AirPlay receiver — keep if you AirPlay from iPhone/Mac
+# com.sony.dtv.homekit               # Apple HomeKit integration
+
+# Do NOT disable here:
+# com.google.android.youtube.tv      # Official YouTube — disable only AFTER SmartTube works (Phase 2)
+# com.google.android.apps.tv.launcherx  # Stock home screen — only after Projectivy is the default (Phase 1, step 5)
