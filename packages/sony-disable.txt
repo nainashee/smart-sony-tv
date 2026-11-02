@@ -67,6 +67,8 @@ com.google.android.videos          # Google TV Shop/Library (rentals, purchases)
 # com.sony.dtv.airplayapp            # AirPlay receiver — keep if you AirPlay from iPhone/Mac
 # com.sony.dtv.homekit               # Apple HomeKit integration
 
+# Official YouTube — replaced by SmartTube (Phase 2 done)
+com.google.android.youtube.tv        # Official YouTube app (ads). Note: 'Uninstall' on the TV only removes updates; disable instead.
+
 # Do NOT disable here:
-# com.google.android.youtube.tv      # Official YouTube — disable only AFTER SmartTube works (Phase 2)
 # com.google.android.apps.tv.launcherx  # Stock home screen — only after Projectivy is the default (Phase 1, step 5)
