@@ -56,4 +56,5 @@ Every package gets one of three verdicts:
 
 | Date | Batch | Result |
 | --- | --- | --- |
+| 2026-11-02 | 2 | 14 preloaded streaming apps disabled (kept Prime Video, Spotify, Apple TV app, AirPlay, Hulu). Rebooted and verified. |
 | 2026-11-02 | 1 | 12 packages disabled (Samba TV, Sony telemetry, promos, demo mode). Rebooted; home screen, HDMI (Apple TV), soundbar, streaming apps and Assistant all working. |

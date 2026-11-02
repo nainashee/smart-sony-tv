@@ -6,9 +6,9 @@ Make a Sony Google TV fast, ad-free and tracking-free — using free tools, no r
 
 | Goal | How | Status |
 | --- | --- | --- |
-| Remove bloatware | ADB `disable-user` from a reviewed package list | Batch 1 done (12 packages) |
+| Remove bloatware | ADB `disable-user` from a reviewed package list | Done — 26 packages (batches 1–2) |
 | Faster TV | Debloat + lightweight launcher (Projectivy) | In progress |
-| Ad-free YouTube | [SmartTube](https://github.com/yuliskov/SmartTube) (open source) | Planned |
+| Ad-free YouTube | [SmartTube](https://github.com/yuliskov/SmartTube) (open source) + SponsorBlock | Done |
 | Stop viewing tracking | Disable Samba Interactive TV / ACR | Done |
 | Mute Hulu ads automatically | Custom Android accessibility app (`hulu-ad-mute/`) | Feasibility test pending |
 
@@ -46,6 +46,19 @@ Make a Sony Google TV fast, ad-free and tracking-free — using free tools, no r
    ```powershell
    .\scripts\restore.ps1            # re-enables everything in the list
    ```
+
+## Installing SmartTube
+
+Downloads the latest **stable** release straight from the developer's GitHub (never a mirror site):
+
+```powershell
+$rel = Invoke-RestMethod https://api.github.com/repos/yuliskov/SmartTube/releases/latest
+$apk = $rel.assets | Where-Object name -match 'armeabi-v7a.*\.apk$' | Select-Object -First 1
+Invoke-WebRequest $apk.browser_download_url -OutFile "$HOME\Downloads\SmartTube.apk"
+adb install "$HOME\Downloads\SmartTube.apk"
+```
+
+Then in SmartTube: sign in, and enable SponsorBlock (skip Sponsor, Self-promotion, Interaction reminder).
 
 ## Safety
 
