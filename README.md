@@ -6,10 +6,10 @@ Make a Sony Google TV fast, ad-free and tracking-free — using free tools, no r
 
 | Goal | How | Status |
 | --- | --- | --- |
-| Remove bloatware | ADB `disable-user` from a reviewed package list | In progress |
+| Remove bloatware | ADB `disable-user` from a reviewed package list | Batch 1 done (12 packages) |
 | Faster TV | Debloat + lightweight launcher (Projectivy) | In progress |
 | Ad-free YouTube | [SmartTube](https://github.com/yuliskov/SmartTube) (open source) | Planned |
-| Stop viewing tracking | Disable Samba Interactive TV / ACR | Planned |
+| Stop viewing tracking | Disable Samba Interactive TV / ACR | Done |
 | Mute Hulu ads automatically | Custom Android accessibility app (`hulu-ad-mute/`) | Feasibility test pending |
 
 ## What it can't do
