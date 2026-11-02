@@ -7,7 +7,7 @@ Make a Sony Google TV fast, ad-free and tracking-free — using free tools, no r
 | Goal | How | Status |
 | --- | --- | --- |
 | Remove bloatware | ADB `disable-user` from a reviewed package list | Done — 26 packages (batches 1–2) |
-| Faster TV | Debloat + lightweight launcher (Projectivy) | In progress |
+| Faster TV | Debloat + [CleanFrame TV](https://github.com/mdrzn/cleanframe-tv) launcher | In progress |
 | Ad-free YouTube | [SmartTube](https://github.com/yuliskov/SmartTube) (open source) + SponsorBlock | Done |
 | Stop viewing tracking | Disable Samba Interactive TV / ACR | Done |
 | Mute Hulu ads automatically | Custom Android accessibility app (`hulu-ad-mute/`) | Feasibility test pending |
@@ -59,6 +59,19 @@ adb install "$HOME\Downloads\SmartTube.apk"
 ```
 
 Then in SmartTube: sign in, and enable SponsorBlock (skip Sponsor, Self-promotion, Interaction reminder).
+
+## Clean home screen (CleanFrame TV)
+
+Install the latest release (checksum-verified), then make it the default **without** disabling Google TV:
+
+```powershell
+.\scripts\set-home.ps1          # CleanFrame becomes home; Google TV stays as fallback
+.\scripts\set-home.ps1 -Reset   # back to Google TV
+```
+
+> Lesson learned: disabling the Google TV launcher (`launcherx`) on Google TV triggers a hidden
+> recovery screen (`setupwraith/.RecoveryActivity`) that shows a black screen. Never disable it —
+> set the default instead, and re-run `set-home.ps1` if Google TV reclaims it after a full restart.
 
 ## Safety
 
