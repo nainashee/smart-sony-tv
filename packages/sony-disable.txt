@@ -38,24 +38,25 @@ com.google.android.play.games        # Google Play Games
 # com.sony.dtv.gestureapp            # Hand-gesture control (needs camera)
 # com.sony.dtv.distancealert         # "Too close to TV" alert (needs camera)
 
-# Preloaded streaming apps — disable the ones you never open
+# Preloaded streaming apps — BATCH 2 (active): everything except Prime Video, Spotify, Apple TV app.
+# Hulu is not listed (kept for the auto-mute project). Official YouTube stays until SmartTube works.
 # com.amazon.amazonvideo.livingroom  # Prime Video
-# com.disney.disneyplus              # Disney+
-# com.netflix.ninja                  # Netflix
-# com.netflix.partner.ncm            # Netflix partner helper (disable with Netflix only)
-# com.cbs.ott                        # Paramount+
-# com.sling                          # Sling TV
-# com.tubitv                         # Tubi
-# com.xumo.xumo.tv                   # Xumo
-# tv.pluto.android                   # Pluto TV
-# air.com.vudu.air.DownloaderTablet  # Vudu / Fandango at Home
-# com.espn.score_center              # ESPN
+com.disney.disneyplus              # Disney+
+com.netflix.ninja                  # Netflix
+com.netflix.partner.ncm            # Netflix partner helper (disable with Netflix only)
+com.cbs.ott                        # Paramount+
+com.sling                          # Sling TV
+com.tubitv                         # Tubi
+com.xumo.xumo.tv                   # Xumo
+tv.pluto.android                   # Pluto TV
+air.com.vudu.air.DownloaderTablet  # Vudu / Fandango at Home
+com.espn.score_center              # ESPN
 # com.spotify.tv.android             # Spotify
 # com.apple.atve.sony.appletv        # Apple TV app — redundant if you use the Apple TV box
-# com.google.android.youtube.tvkids  # YouTube Kids
-# com.google.android.youtube.tvmusic # YouTube Music
-# com.google.android.youtube.tvunplugged  # YouTube TV (live TV subscription)
-# com.google.android.videos          # Google TV Shop/Library (rentals, purchases)
+com.google.android.youtube.tvkids  # YouTube Kids
+com.google.android.youtube.tvmusic # YouTube Music
+com.google.android.youtube.tvunplugged  # YouTube TV (live TV subscription)
+com.google.android.videos          # Google TV Shop/Library (rentals, purchases)
 
 # Features you may not use
 # com.google.android.marvin.talkback # TalkBack screen reader
